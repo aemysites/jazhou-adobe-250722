@@ -45,3 +45,151 @@
     padding: 40px 32px;
   }
 }
+
+.hero.hero13 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+}
+
+/* Text section (left) */
+.hero.hero13 > div:last-child {
+  flex: 0 0 48%;
+  order: 1;
+  background: #35373F;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 34px 0 42px;
+  min-height: 220px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero.hero13 > div:last-child > div {
+  max-width: 470px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero.hero13 > div:last-child p {
+  color: #eee;
+  font-size: 1.02em;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.hero.hero13 > div:last-child strong {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+/* Geometric accent in left bottom corner */
+.hero.hero13 > div:last-child::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 84px;
+  height: 36px;
+  background: linear-gradient(120deg, #0096D6 40%, #6DC06D 80%, #F6BE00 100%);
+  clip-path: polygon(0 100%, 30% 0, 100% 0, 100% 100%);
+  opacity: 0.7;
+  z-index: 1;
+  display: block;
+  content: '';
+}
+
+/* Image section (right) */
+.hero.hero13 > div:first-child {
+  flex: 1 1 52%;
+  order: 2;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+.hero.hero13 > div:first-child > div {
+  flex: 1 1 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+.hero.hero13 > div:first-child picture,
+.hero.hero13 > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: static;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.hero.hero13 > div:first-child picture {
+  position: static;
+  inset: unset;
+  z-index: 1;
+}
+
+/* Responsive stacking for small screens */
+@media (width <= 900px) {
+  .hero.hero13 {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .hero.hero13 > div:first-child,
+  .hero.hero13 > div:last-child {
+    width: 100%;
+    min-height: 180px;
+    padding-left: 0;
+    padding-right: 0;
+    order: unset;
+  }
+
+  .hero.hero13 > div:first-child > div {
+    clip-path: none;
+    height: 220px;
+    min-height: 140px;
+  }
+
+  .hero.hero13 > div:last-child {
+    padding: 24px 16px;
+    min-height: unset;
+  }
+
+  .hero.hero13 > div:last-child > div {
+    max-width: 100vw;
+  }
+
+  .hero.hero13 > div:last-child::after {
+    width: 60px;
+    height: 24px;
+  }
+}
